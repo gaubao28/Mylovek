@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Một lời nói nhỏ 💌</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            width: 330px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        button {
+            padding: 10px 18px;
+            margin: 8px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .pink { background: #ff6b81; color: white; }
+        .blue { background: #70a1ff; color: white; }
+        .gray { background: #ced6e0; }
+        #content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div id="content">
+        <h2>Bạn ơi 👀<br>Bạn có ny chưa?</h2>
+        <button class="pink" onclick="daCo()">Rồi</button>
+        <button class="blue" onclick="chuaCo()">Chưa</button>
+    </div>
+</div>
+
+<script>
+    function daCo() {
+        document.getElementById("content").innerHTML =
+            "Cảm ơn cậu đã xem nha 😊💖<br><br>" +
+            "<button class='blue' onclick='goZalo()'>Nhắn Zalo 💬</button>";
+    }
+
+    function chuaCo() {
+        document.getElementById("content").innerHTML =
+            "Mình nói thật lòng nha 🥺💗<br>" +
+            "Mình thích cậu đó...<br>" +
+            "Cậu có thể cho mình được làm người yêu cậu không? 💕<br><br>" +
+            "<button class='pink' onclick='dongY()'>Đồng ý 💖</button>" +
+            "<button class='gray' onclick='tuChoi()'>Không đồng ý 😅</button>";
+    }
+
+    function dongY() {
+        document.getElementById("content").innerHTML =
+            "Cảm ơn cậu đã cho mình cơ hội<br>" +
+            "để được bên cạnh cậu 💖🥺<br><br>" +
+            "<button class='pink' onclick='goZalo()'>Nhắn Zalo 💬</button>";
+    }
+
+    function tuChoi() {
+        document.getElementById("content").innerHTML =
+            "Cảm ơn cậu đã xem và lắng nghe nha 😊<br>" +
+            "Mình tôn trọng quyết định của cậu 💗<br><br>" +
+            "<button class='blue' onclick='goZalo()'>Nhắn Zalo 💬</button>";
+    }
+
+    function goZalo() {
+        // 🔧 ĐỔI SỐ NÀY THÀNH ZALO CỦA CẬU
+        window.location.href = "https://zalo.me/0972786312";
+    }
+</script>
+
+</body>
+</html>
